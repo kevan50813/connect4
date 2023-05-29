@@ -1,37 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: grid;
+  place-items: center;
+}
 
-body {
-  font-family: Arial;
+h1{
   text-align: center;
+  margin: 20px 0 20px 0;
+}
+h2{
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#board {
-  width: 540px;
-  height: 630px;
-   
-  background-color: blue;
-  border: 10px solid navy;
+.board{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  border: 2px solid black;
+ width: 630px;
+ background-color: rgb(74, 74, 198);
+  
 
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
 }
 
-.tile {
-  width: 70px;
-  height: 70px;
-  border: 1px solid black;
+ul{
+  display: grid;
+  place-items: center;
+  
+}
+
+ul p{
   margin: 5px;
-
+  width: 75px;
+  height: 75px;
+  border: 2px solid black;
+  border-radius: 100px;
   background-color: white;
-  border-radius: 50%;
-  border: 5px solid navy;
-
 }
 
-.red {
-  background-color: red;
+ul:hover{
+  cursor: pointer;
+  background-color: rgb(98, 136, 238);
 }
 
-.yellow {
-  background-color: yellow;
+
+@media(max-width:700px){
+  .board{
+      width: 500px;
+  }
+  ul p{
+      width: 55px;
+      height: 55px;
+      
+  }
+  
+}
+@media(max-width:520px){
+  .board{
+      width: 400px;
+  }
+  ul p{
+      width: 40px;
+      height: 40px;
+      
+  }
+  
+}
+@media(max-width:420px){
+  .board{
+      width: 320px;
+  }
+  ul p{
+      width: 30px;
+      height: 30px;
+      
+  }
+  
 }
